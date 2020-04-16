@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UsersController extends Controller
 {
     /*
-     * 创建
+     * 创建页面
      */
     public function create()
     {
@@ -23,7 +23,7 @@ class UsersController extends Controller
         return view('users.show', compact('user'));
     }
     /*
-     * 创建验证
+     * 创建用户验证
      */
     public function store(Request $request)
     {
