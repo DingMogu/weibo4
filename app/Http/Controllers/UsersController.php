@@ -87,4 +87,12 @@ class UsersController extends Controller
 
         return redirect()->route('users.show',$user);
     }
+    /*
+     * 用户列表
+     */
+    public function index()
+    {
+        $users = User::paginate(6);
+        return view('users.index',compact('users'));
+    }
 }
